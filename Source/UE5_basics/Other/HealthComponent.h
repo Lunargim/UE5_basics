@@ -46,7 +46,7 @@ public:
 	FHealtDelegate OnHealthRecovery;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Healt: variables")
-	float Health;
+	float Health = 5.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Healt: variables")
 	bool bAutoRecovery = true;

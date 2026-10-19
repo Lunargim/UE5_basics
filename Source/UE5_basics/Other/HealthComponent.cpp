@@ -43,6 +43,7 @@ void UHealthComponent::IncrementMaxHealth(float Amount) {
 
 void UHealthComponent::Healing(float Amount) {
 	Health = FMath::Clamp(Health + Amount, 0.0f, HealthMaxValue);
+	OnHealthRecovery.Broadcast();
 }
 
 void UHealthComponent::CheckDamageTime(float DeltaTime) {
@@ -69,3 +70,5 @@ void UHealthComponent::AutoRecoveryHealth(float DeltaTime) {
 float UHealthComponent::HealthPercentage() {
 	return HealthMaxValue == 0.0 ? 1.0f : (Health/HealthMaxValue);
 }
+
+
