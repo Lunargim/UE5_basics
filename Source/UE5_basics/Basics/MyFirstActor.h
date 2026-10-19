@@ -13,8 +13,8 @@ UCLASS()
 class UE5_BASICS_API AMyFirstActor : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+    
+public: 
 	// Sets default values for this actor's properties
 	AMyFirstActor();
 
@@ -22,11 +22,12 @@ public:
 	UBoxComponent* BoxComponent;
 
 protected:
-	
+    
 	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	virtual void Tick(float DeltaTime) override;
-	
-	
+    
+    
 	UFUNCTION()
 	void OnBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
@@ -34,14 +35,25 @@ protected:
 	void OnEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
 public:
-	
+    
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Settings", meta=(DisplayName="Sensed Characters"))
 	TArray<TSubclassOf<AActor>> SensedCharacterClasses = {ACharacter::StaticClass()};
+
+	UPROPERTY()
+	TArray<AActor*> ActorsInside;
+
+	UFUNCTION(CallInEditor, Category = "Debug")
+	void DebugPrintActors();
 
 	//UFUNCTION(BlueprintImplementableEvent)
 	//void OnSomethingEnter();
 
 private:
+
+	void SyncInitialActors();
+
+	UFUNCTION()
+	void OnInsideActorDestroyed(AActor* DestroyedActor);
 
 	UFUNCTION()
 	void BindTest();
