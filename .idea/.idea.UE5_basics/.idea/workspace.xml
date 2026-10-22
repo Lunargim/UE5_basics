@@ -17,9 +17,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/ZR/OR4FL18OVOFCFVPTDLX9P5.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/ZR/OR4FL18OVOFCFVPTDLX9P5.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Other/HealthComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Other/HealthComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Other/HealthComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Other/HealthComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UE5_basics.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/UE5_basics.uproject" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +31,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://7" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/ADamageDealer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthEffectBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthGiver.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TargetBox.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/ADamageDealer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/AHealthEffectBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/AHealthGiver.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TargetBox.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TestShootingCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/TP_Character/ATP_TestCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,7 +66,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Exercises/lesson1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Exercises/lesson2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -341,6 +344,10 @@
       <workItem from="1791980332203" duration="1666000" />
       <workItem from="1791982117394" duration="302000" />
       <workItem from="1792399616183" duration="12364000" />
+      <workItem from="1792569282838" duration="16449000" />
+      <workItem from="1792675032190" duration="386000" />
+      <workItem from="1792675442379" duration="556000" />
+      <workItem from="1792677978725" duration="702000" />
     </task>
     <servers />
   </component>
