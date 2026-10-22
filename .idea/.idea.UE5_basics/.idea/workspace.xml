@@ -17,7 +17,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UE5_basics.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/UE5_basics.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_TestShootingCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_TestShootingCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/0/AJ/WF40DJYYCGQKFTA29SIAHE.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UE5_basics.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/UE5_basics.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://4" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://5" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/ADamageDealer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthEffectBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthGiver.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -58,24 +61,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;C/C++ Project.UE5_basics.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Exercises/lesson2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "C/C++ Project.UE5_basics.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Exercises/lesson4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C/C++ Project.UE5_basics">
     <configuration name="UE5" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -348,6 +351,7 @@
       <workItem from="1792675032190" duration="386000" />
       <workItem from="1792675442379" duration="556000" />
       <workItem from="1792677978725" duration="702000" />
+      <workItem from="1792687549733" duration="1927000" />
     </task>
     <servers />
   </component>
