@@ -226,10 +226,7 @@ void ATestShootingCharacter::HandleProgressCameraOffset(FVector Offset) {
  
 void ATestShootingCharacter::ShootLineTrace()
 {
- 
-	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
-				TEXT("Colpito") );
-	/*AController* PC = GetController();
+	AController* PC = GetController();
 	if (!PC) return;
 	
 	FVector Start;
@@ -258,5 +255,5 @@ void ATestShootingCharacter::ShootLineTrace()
 			GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("Colpito: %s"), *HitActor->GetName()));
 		}
-	}*/
+	}
 }

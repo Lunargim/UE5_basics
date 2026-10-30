@@ -17,6 +17,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_TestShootingCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_TestShootingCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://1" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/ADamageDealer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthEffectBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthGiver.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -349,7 +351,7 @@
       <workItem from="1792677978725" duration="702000" />
       <workItem from="1792687549733" duration="1927000" />
       <workItem from="1792766282173" duration="4230000" />
-      <workItem from="1793352558528" duration="860000" />
+      <workItem from="1793352558528" duration="2190000" />
     </task>
     <servers />
   </component>
