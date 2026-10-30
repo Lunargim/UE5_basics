@@ -232,8 +232,9 @@ void ATestShootingCharacter::ShootLineTrace()
 	FVector Start;
 	FRotator Rot;
 	PC->GetPlayerViewPoint(Start, Rot);
- 
-	const float Range = 2000.f;
+
+	Start += Rot.Vector() * CameraBoom->TargetArmLength; //starting from character body
+	const float Range = 500.f;
 	const FVector End = Start + Rot.Vector() * Range;
  
 	FHitResult Hit;
