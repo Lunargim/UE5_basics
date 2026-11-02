@@ -15,12 +15,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BP_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-3/BP_Enemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/ZR/OR4FL18OVOFCFVPTDLX9P5.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/5/ZR/OR4FL18OVOFCFVPTDLX9P5.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,17 +28,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://22" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/ADamageDealer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthEffectBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthGiver.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TargetBox.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione4/Ball.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/ADamageDealer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/AHealthEffectBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione2/AHealthGiver.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TargetBox.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TestShootingCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione4/Ball.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/TP_Character/ATP_TestCharacter.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -353,6 +351,7 @@
       <workItem from="1792687549733" duration="1927000" />
       <workItem from="1792766282173" duration="4230000" />
       <workItem from="1793352558528" duration="11054000" />
+      <workItem from="1793610412095" duration="13530000" />
     </task>
     <servers />
   </component>
