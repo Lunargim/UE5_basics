@@ -34,6 +34,9 @@ public:
     /** Follow camera */
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
     UCameraComponent* FollowCamera;
+
+    UPROPERTY(EditAnywhere)
+    USceneComponent* BallSocket;
  
 protected:
     // Called when the game starts or when spawned

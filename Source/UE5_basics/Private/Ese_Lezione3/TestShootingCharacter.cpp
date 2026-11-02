@@ -8,6 +8,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/TimelineComponent.h"
+#include "Ese_Lezione4/Ball.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
@@ -46,6 +47,9 @@ ATestShootingCharacter::ATestShootingCharacter()
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false;
+
+	BallSocket = CreateDefaultSubobject<USceneComponent>(TEXT("BallSocket"));
+	BallSocket -> SetupAttachment(this->GetMesh());
 }
  
 // Called when the game starts or when spawned
@@ -253,8 +257,12 @@ void ATestShootingCharacter::ShootLineTrace()
  
 		if (AActor* HitActor = Hit.GetActor())
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
+			if (ABall* HitBall = Cast<ABall>(HitActor))
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("Colpito: %s"), *HitActor->GetName()));
+				HitBall->MoveForward(BallSocket);
+			}
 		}
 	}
 }
