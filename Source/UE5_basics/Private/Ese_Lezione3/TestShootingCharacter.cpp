@@ -50,6 +50,9 @@ ATestShootingCharacter::ATestShootingCharacter()
 
 	BallSocket = CreateDefaultSubobject<USceneComponent>(TEXT("BallSocket"));
 	BallSocket -> SetupAttachment(this->GetMesh());
+
+	bCanShoot=true;
+	Score=0;
 }
  
 // Called when the game starts or when spawned
@@ -203,7 +206,16 @@ void ATestShootingCharacter::DoJumpEnd()
 	// signal the character to stop jumping
 	StopJumping();
 }
- 
+
+void ATestShootingCharacter::IncreaseScore()
+{
+	Score++;
+
+	GEngine->AddOnScreenDebugMessage(
+	static_cast<uint64>(GetUniqueID()), 5.f, FColor::Green,
+	FString::Printf(TEXT("%s -> Punti: %d"), *GetName(), Score));
+}
+
 void ATestShootingCharacter::AimIn()
 {
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -230,6 +242,8 @@ void ATestShootingCharacter::HandleProgressCameraOffset(FVector Offset) {
  
 void ATestShootingCharacter::ShootLineTrace()
 {
+	if (GetWorldTimerManager().IsTimerActive(CooldownTimer)) return;
+	
 	AController* PC = GetController();
 	if (!PC) return;
 	
@@ -261,8 +275,10 @@ void ATestShootingCharacter::ShootLineTrace()
 			{
 				GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("Colpito: %s"), *HitActor->GetName()));
-				HitBall->MoveForward(BallSocket);
+				HitBall->BroadcastBallActions(this);
 			}
 		}
 	}
+
+	GetWorldTimerManager().SetTimer(CooldownTimer, 1.f, false);
 }

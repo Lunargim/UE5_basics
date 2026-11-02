@@ -3,6 +3,8 @@
 
 #include "Ese_Lezione4/Ball.h"
 
+#include "Ese_Lezione3/TestShootingCharacter.h"
+
 // Sets default values
 ABall::ABall()
 {
@@ -27,7 +29,17 @@ ABall::ABall()
 void ABall::BeginPlay()
 {
 	Super::BeginPlay();
+
+	OnBallTaken.AddDynamic(this, &ABall::MoveForward);
+	OnBallTaken.AddDynamic(this, &ABall::SetCurrentPlayer);
+	OnBallTaken.AddDynamic(this, &ABall::StartScoreTimer);
 	
+}
+
+void ABall::BroadcastBallActions(ATestShootingCharacter* Player)
+{
+	if (Player == CurrentPlayer) return;
+	OnBallTaken.Broadcast(Player);
 }
 
 // Called every frame
@@ -37,13 +49,35 @@ void ABall::Tick(float DeltaTime)
 
 }
 
-
-void ABall::MoveForward(USceneComponent* PlayerSocket)
+void ABall::MoveForward(ATestShootingCharacter* Player)
 {
-	if (!PlayerSocket) return;
+	if (!Player) return;
 	
-	AttachToComponent(PlayerSocket,FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	AttachToComponent(Player->BallSocket,FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 }
+
+void ABall::SetCurrentPlayer(ATestShootingCharacter* Player)
+{
+	if (!Player) return;
+	CurrentPlayer = Player;
+}
+
+void ABall::StartScoreTimer(ATestShootingCharacter* Player)
+{
+	if (!Player) return;
+
+	GetWorldTimerManager().SetTimer(
+	ScoreTimer, this, &ABall::AddScoring, 5.f, true);
+}
+
+void ABall::AddScoring()
+{
+	if (!CurrentPlayer) return;
+
+	CurrentPlayer->IncreaseScore();
+}
+
+
 
 
 

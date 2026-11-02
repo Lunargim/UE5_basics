@@ -78,6 +78,15 @@ protected:
  
     UPROPERTY(EditAnywhere, Category="Input")
     UInputAction* ShootAction;
+
+    UPROPERTY(EditAnywhere)
+    bool bCanShoot;
+
+    UPROPERTY()
+    FTimerHandle CooldownTimer;
+
+    UPROPERTY()
+    int32 Score;
  
 public: 
     // Called every frame
@@ -104,6 +113,9 @@ public:
     /** Handles jump released inputs from either controls or UI interfaces */
     UFUNCTION(BlueprintCallable, Category="Input")
     virtual void DoJumpEnd();
+
+    UFUNCTION(BlueprintCallable)
+    void IncreaseScore();
  
 private:
     UFUNCTION()

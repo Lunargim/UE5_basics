@@ -7,6 +7,9 @@
 #include "GameFramework/Actor.h"
 #include "Ball.generated.h"
 
+class ATestShootingCharacter;
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnBallTaken, ATestShootingCharacter*, Player);
+
 UCLASS()
 class UE5_BASICS_API ABall : public AActor
 {
@@ -22,15 +25,30 @@ public:
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* BallMesh;
 
+	UPROPERTY()
+	FOnBallTaken OnBallTaken;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY()
+	ATestShootingCharacter *CurrentPlayer;
+
+	UFUNCTION()
+	void MoveForward(ATestShootingCharacter* Player);
+	UFUNCTION()
+	void SetCurrentPlayer(ATestShootingCharacter* Player);
+	UFUNCTION()
+	void StartScoreTimer(ATestShootingCharacter* Player);
+	void AddScoring();
+
+	FTimerHandle ScoreTimer;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable)
-	void MoveForward(USceneComponent *PlayerSocket);
-
+	void BroadcastBallActions(ATestShootingCharacter* Player);
 };
