@@ -51,4 +51,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void BroadcastBallActions(ATestShootingCharacter* Player);
+
+	void ShotBall(const FVector& Direction, float Strength);
 };

@@ -17,22 +17,14 @@
   <component name="ChangeListManager">
     <list default="true" id="aeaeb703-cd09-4f17-afcf-45ecd4c3d1b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UE5_basics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BB_Enemy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BP_AIControllerEnemy.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BP_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-3/BP_Enemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BP_Enemy_Anim.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BTTask_Aim.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BTTask_AimOut.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BTTask_FocusOnPlayer.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BTTask_GetCover.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BTTask_GetPlayerAsDestination.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Lesson-3/BT_Enemy.uasset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_ShootingCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-3/EseInClasse/BP_ShootingCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/EQ/ICG6D4D5LS1BVYZJOEGVBS.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/EQ/ICG6D4D5LS1BVYZJOEGVBS.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Lesson-4/BP_Ball.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lesson-4/BP_Ball.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/YR/NTBDDESTIFLF83MGN377O7.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/E/YR/NTBDDESTIFLF83MGN377O7.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione3/TestShootingCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione4/Ball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione4/Ball.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TestShootingCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione3/TestShootingCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione4/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/UE5_basics/Public/Ese_Lezione4/Ball.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +38,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://8" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/ADamageDealer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthEffectBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/UE5_basics/Private/Ese_Lezione2/AHealthGiver.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -370,7 +362,7 @@
       <workItem from="1793352558528" duration="11054000" />
       <workItem from="1793610412095" duration="13530000" />
       <workItem from="1793800138161" duration="137000" />
-      <workItem from="1793800439325" duration="396000" />
+      <workItem from="1793800439325" duration="5658000" />
     </task>
     <servers />
   </component>

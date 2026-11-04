@@ -145,6 +145,11 @@ void ATestShootingCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 		{
 			EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Started, this, &ATestShootingCharacter::ShootLineTrace);
 		}
+
+		if (ShootBallAction)
+		{
+			EnhancedInputComponent->BindAction(ShootBallAction, ETriggerEvent::Started, this, &ATestShootingCharacter::ShootBall);
+		}
 	}
 }
  
@@ -280,12 +285,32 @@ void ATestShootingCharacter::ShootLineTrace()
 		{
 			if (ABall* HitBall = Cast<ABall>(HitActor))
 			{
+				CurrentBall = HitBall;
 				GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("Colpito: %s"), *HitActor->GetName()));
-				HitBall->BroadcastBallActions(this);
+				CurrentBall->BroadcastBallActions(this);
 			}
 		}
 	}
 
 	GetWorldTimerManager().SetTimer(CooldownTimer, 1.f, false);
+}
+
+void ATestShootingCharacter::ShootBall()
+{
+	if (!bHasBall) return;
+	if (!IsValid(CurrentBall)) return;
+	
+	CurrentBall->ShotBall(FollowCamera->GetForwardVector(), 1000.f);
+	
+	ClearBall();
+	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
+				FString::Printf(TEXT("PallaSparata")));
+	
+}
+
+void ATestShootingCharacter::ClearBall()
+{
+	bHasBall = false;
+	CurrentBall = nullptr;
 }

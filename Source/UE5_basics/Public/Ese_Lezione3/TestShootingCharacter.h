@@ -11,6 +11,7 @@
 #include "TestShootingCharacter.generated.h"
 
 class UInputMappingContext;
+class ABall;
 
 UCLASS()
 class UE5_BASICS_API ATestShootingCharacter : public ACharacter
@@ -79,6 +80,9 @@ protected:
     UPROPERTY(EditAnywhere, Category="Input")
     UInputAction* ShootAction;
 
+    UPROPERTY(EditAnywhere, Category="Input")
+    UInputAction* ShootBallAction;
+
     UPROPERTY(EditAnywhere)
     bool bCanShoot;
 
@@ -90,6 +94,9 @@ protected:
 
     UPROPERTY()
     bool bHasBall;
+
+    UPROPERTY()
+    ABall *CurrentBall;
  
 public: 
     // Called every frame
@@ -122,6 +129,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void BlockInput();
+
+    UFUNCTION(BlueprintCallable)
+    void ClearBall();
  
 private:
     UFUNCTION()
@@ -132,4 +142,8 @@ private:
  
     UFUNCTION(BlueprintCallable)
     void ShootLineTrace();
+
+    UFUNCTION()
+    void ShootBall();
+    
 };

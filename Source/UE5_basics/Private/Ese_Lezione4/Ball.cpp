@@ -17,9 +17,9 @@ ABall::ABall()
 	BallMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BallMesh"));
 	BallMesh->SetupAttachment(RootComponent);
 
-	BallSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	BallSphere->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	BallSphere->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
-	BallSphere->SetSimulatePhysics(false);
+	BallSphere->SetSimulatePhysics(true);
 
 	BallMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
@@ -39,6 +39,8 @@ void ABall::BeginPlay()
 void ABall::BroadcastBallActions(ATestShootingCharacter* Player)
 {
 	if (Player == CurrentPlayer) return;
+	BallSphere->SetSimulatePhysics(false);
+	BallSphere->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	OnBallTaken.Broadcast(Player);
 }
 
@@ -59,6 +61,12 @@ void ABall::MoveForward(ATestShootingCharacter* Player)
 void ABall::SetCurrentPlayer(ATestShootingCharacter* Player)
 {
 	if (!Player) return;
+
+	if (CurrentPlayer && CurrentPlayer != Player)
+	{
+		CurrentPlayer->ClearBall();
+	}
+	
 	CurrentPlayer = Player;
 	CurrentPlayer -> BlockInput();
 }
@@ -76,6 +84,24 @@ void ABall::AddScoring()
 	if (!CurrentPlayer) return;
 
 	CurrentPlayer->IncreaseScore();
+}
+
+void ABall::ShotBall(const FVector& Direction, float Strength)
+{
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	
+	BallSphere->SetCollisionProfileName(TEXT("PhysicsActor"));
+	BallSphere->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	BallSphere->SetSimulatePhysics(true);
+
+	BallSphere->SetCollisionProfileName(TEXT("PhysicsActor"));
+	BallSphere->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+	BallSphere->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);
+	BallSphere->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+	
+	BallSphere->AddImpulse(Direction * Strength, NAME_None, true);
+
+	CurrentPlayer = nullptr;
 }
 
 
