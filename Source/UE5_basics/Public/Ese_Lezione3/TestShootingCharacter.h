@@ -87,6 +87,9 @@ protected:
 
     UPROPERTY()
     int32 Score;
+
+    UPROPERTY()
+    bool bHasBall;
  
 public: 
     // Called every frame
@@ -116,6 +119,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     void IncreaseScore();
+
+    UFUNCTION(BlueprintCallable)
+    void BlockInput();
  
 private:
     UFUNCTION()

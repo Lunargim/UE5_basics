@@ -60,6 +60,7 @@ void ABall::SetCurrentPlayer(ATestShootingCharacter* Player)
 {
 	if (!Player) return;
 	CurrentPlayer = Player;
+	CurrentPlayer -> BlockInput();
 }
 
 void ABall::StartScoreTimer(ATestShootingCharacter* Player)

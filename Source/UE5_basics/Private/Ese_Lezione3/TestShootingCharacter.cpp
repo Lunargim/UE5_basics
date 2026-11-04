@@ -51,6 +51,7 @@ ATestShootingCharacter::ATestShootingCharacter()
 	BallSocket = CreateDefaultSubobject<USceneComponent>(TEXT("BallSocket"));
 	BallSocket -> SetupAttachment(this->GetMesh());
 
+	bHasBall=false;
 	bCanShoot=true;
 	Score=0;
 }
@@ -216,6 +217,11 @@ void ATestShootingCharacter::IncreaseScore()
 	FString::Printf(TEXT("%s -> Punti: %d"), *GetName(), Score));
 }
 
+void ATestShootingCharacter::BlockInput()
+{
+	bHasBall = true;
+}
+
 void ATestShootingCharacter::AimIn()
 {
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -243,6 +249,7 @@ void ATestShootingCharacter::HandleProgressCameraOffset(FVector Offset) {
 void ATestShootingCharacter::ShootLineTrace()
 {
 	if (GetWorldTimerManager().IsTimerActive(CooldownTimer)) return;
+	if (bHasBall) return;
 	
 	AController* PC = GetController();
 	if (!PC) return;
