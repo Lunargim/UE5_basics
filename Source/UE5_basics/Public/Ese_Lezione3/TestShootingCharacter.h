@@ -74,8 +74,8 @@ protected:
     UInputAction* MouseLookAction;
     
     /** Aim Input Action */
-    UPROPERTY(EditAnywhere, Category="Input")
-    UInputAction* AimAction;
+    //UPROPERTY(EditAnywhere, Category="Input")
+    //UInputAction* AimAction;
  
     UPROPERTY(EditAnywhere, Category="Input")
     UInputAction* ShootAction;

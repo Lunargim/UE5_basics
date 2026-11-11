@@ -134,11 +134,11 @@ void ATestShootingCharacter::SetupPlayerInputComponent(UInputComponent* PlayerIn
 		}
  
 		// Aim
-		if (AimAction)
-		{
-			EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Started, this, &ATestShootingCharacter::AimIn);
-			EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, this, &ATestShootingCharacter::AimOut);
-		}
+		//if (AimAction)
+		//{
+		//	EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Started, this, &ATestShootingCharacter::AimIn);
+		//	EnhancedInputComponent->BindAction(AimAction, ETriggerEvent::Completed, this, &ATestShootingCharacter::AimOut);
+		//}
  
 		// Shoot
 		if (ShootAction)
