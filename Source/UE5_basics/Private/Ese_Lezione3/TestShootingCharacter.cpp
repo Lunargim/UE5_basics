@@ -9,6 +9,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/TimelineComponent.h"
 #include "Ese_Lezione4/Ball.h"
+#include "Ese_Lezione5/StaminaComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerController.h"
@@ -54,12 +55,15 @@ ATestShootingCharacter::ATestShootingCharacter()
 	bHasBall=false;
 	bCanShoot=true;
 	Score=0;
+
 }
  
 // Called when the game starts or when spawned
 void ATestShootingCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	StaminaComponent = FindComponentByClass<UStaminaComponent>();
  
 	if(MovementCurve)
 	{
@@ -286,6 +290,7 @@ void ATestShootingCharacter::ShootLineTrace()
 			if (ABall* HitBall = Cast<ABall>(HitActor))
 			{
 				CurrentBall = HitBall;
+				StaminaComponent->SetHasBall(true);
 				GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("Colpito: %s"), *HitActor->GetName()));
 				CurrentBall->BroadcastBallActions(this);
@@ -302,6 +307,7 @@ void ATestShootingCharacter::ShootBall()
 	if (!IsValid(CurrentBall)) return;
 	
 	CurrentBall->ShotBall(FollowCamera->GetForwardVector(), 1000.f);
+	StaminaComponent->SetHasBall(false);
 	
 	ClearBall();
 	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,

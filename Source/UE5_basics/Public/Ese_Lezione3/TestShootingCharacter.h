@@ -12,6 +12,7 @@
 
 class UInputMappingContext;
 class ABall;
+class UStaminaComponent;
 
 UCLASS()
 class UE5_BASICS_API ATestShootingCharacter : public ACharacter
@@ -21,6 +22,9 @@ class UE5_BASICS_API ATestShootingCharacter : public ACharacter
 public:
     
     ATestShootingCharacter();
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Stamina")
+    UStaminaComponent* StaminaComponent;
     
     UPROPERTY(EditAnywhere, Category = "Timeline")
     UCurveFloat* MovementCurve;
