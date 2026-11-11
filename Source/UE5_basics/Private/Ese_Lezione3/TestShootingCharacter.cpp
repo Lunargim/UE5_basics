@@ -62,8 +62,9 @@ ATestShootingCharacter::ATestShootingCharacter()
 void ATestShootingCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	StaminaComponent = FindComponentByClass<UStaminaComponent>();
+	StaminaComponent -> OnStaminaEnd.AddDynamic(this, &ATestShootingCharacter::LeaveBall);
  
 	if(MovementCurve)
 	{
@@ -313,6 +314,16 @@ void ATestShootingCharacter::ShootBall()
 	GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
 				FString::Printf(TEXT("PallaSparata")));
 	
+}
+
+void ATestShootingCharacter::LeaveBall()
+{
+	if (!bHasBall) return;
+	if (!IsValid(CurrentBall)) return;
+
+	CurrentBall->ShotBall(FollowCamera->GetForwardVector(), 0.f);
+	StaminaComponent->SetHasBall(false);
+	ClearBall();
 }
 
 void ATestShootingCharacter::ClearBall()

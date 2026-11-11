@@ -23,7 +23,7 @@ void UStaminaComponent::BeginPlay()
 	StaminaMaxValue = 10.0f;
 	ElapsedTime = 0.0f;
 	TimeSinceLastStaminaUse = 0.0f;
-	StaminaRecoveryTime = 5.0f;
+	StaminaRecoveryTime = 2.0f;
 	
 	bHasBall = false;
 	// ...
@@ -45,12 +45,7 @@ void UStaminaComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 void UStaminaComponent::SetHasBall(bool HasBall)
 {
 	bHasBall = HasBall;
-
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green,
-			FString::Printf(TEXT("%s HasBall = %d"), *GetOwner()->GetName(), bHasBall));
-	}
+	
 }
 
 void UStaminaComponent::ChangeStamina(float DeltaTime)

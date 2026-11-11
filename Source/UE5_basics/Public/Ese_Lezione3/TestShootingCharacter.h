@@ -149,5 +149,6 @@ private:
 
     UFUNCTION()
     void ShootBall();
-    
+    UFUNCTION()
+    void LeaveBall();
 };
